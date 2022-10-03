@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/quizQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="24dp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="274dp" />
+
+    <TextView
+        android:id="@+id/txtCorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/correct_count_label"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <TextView
+        android:id="@+id/txtIncorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/incorrect_count_label"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+    <TextView
+        android:id="@+id/geoQuiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="GeoQuiz"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/geoQuiz" />
+
+    <Button
+        android:id="@+id/trueButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginEnd="10dp"
+        android:text="True"
+        app:layout_constraintEnd_toStartOf="@+id/falseButton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <Button
+        android:id="@+id/falseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="92dp"
+        android:text="False"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/trueButton"
+        tools:layout_editor_absoluteY="341dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
